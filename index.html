@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Putra Sunda Jaya | Toko Sepeda & Sparepart Sepeda Terlengkap</title>
+  <meta name="description" content="Toko Sepeda & Sparepart Sepeda Putra Sunda Jaya. Menjual Sepeda Gunung (MTB), Sepeda Balap, Sepeda Lipat, dan Sparepart Original Garansi Resmi di Jakarta Timur.">
+  
+  <!-- Remix Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+  <!-- Iconify CDN -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  
+  <!-- Custom Design System CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">
+          <i class="ri-riding-line"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">PUTRA SUNDA <span>JAYA</span></span>
+          <span class="brand-tagline">Bicycle & Spareparts</span>
+        </div>
+      </a>
+
+      <!-- Desktop Search Bar -->
+      <div class="nav-search">
+        <i class="ri-search-line search-icon"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Cari sepeda, Shimano, helm...">
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#kategori-populer" class="nav-link">Kategori</a></li>
+        <li><a href="#katalog" class="nav-link">Katalog Produk</a></li>
+        <li><a href="#layanan" class="nav-link">Layanan Servis</a></li>
+        <li><a href="#brand-mitra" class="nav-link">Brand Mitra</a></li>
+        <li><a href="#sosmed" class="nav-link">Sosial Media</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak & Lokasi</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleCartDrawer(true)" title="Keranjang Belanja">
+          <i class="ri-shopping-cart-2-line"></i>
+          <span class="badge-count" id="cartBadgeCount" style="display: none;">0</span>
+        </button>
+
+        <a href="https://wa.me/628161918515?text=Halo%20Putra%20Sunda%20Jaya,%20saya%20mau%20bertanya%20produk%20sepeda" target="_blank" class="btn btn-whatsapp btn-whatsapp-icon-only">
+          <i class="ri-whatsapp-line"></i> <span class="wa-btn-mobile-text">Hubungi WA</span>
+        </a>
+
+        <button class="icon-btn mobile-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Sub-Search Input Bar -->
+    <div class="mobile-search-bar">
+      <div style="position: relative;">
+        <i class="ri-search-line search-icon"></i>
+        <input type="text" id="mobileSearchInput" class="search-input" placeholder="Cari sepeda, Shimano, sparepart, helm...">
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="beranda">
+    <div class="hero-bg-accent"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-subtitle">
+          <i class="ri-fire-fill"></i> Toko Sepeda & Sparepart Terpercaya #1
+        </div>
+        <h1 class="hero-title">
+          Gowes Lebih Kencang dengan <span>Sepeda & Sparepart</span> Impian
+        </h1>
+        <p class="hero-desc">
+          Putra Sunda Jaya menyediakan koleksi sepeda MTB, Road Bike, Sepeda Lipat, dan 100% sparepart original Shimano, SRAM, RockShox dengan jaminan servis profesional & garansi resmi.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#katalog" class="btn btn-primary">
+            <i class="ri-shopping-bag-3-line"></i> Jelajahi Produk
+          </a>
+          <a href="https://wa.me/628161918515?text=Halo%20Putra%20Sunda%20Jaya" target="_blank" class="btn btn-whatsapp">
+            <i class="ri-whatsapp-line"></i> Chat WA 0816-1918-515
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-img-card">
+          <img src="images/hero_banner.png" alt="Showroom Sepeda Putra Sunda Jaya">
+        </div>
+
+        <div class="hero-float-badge">
+          <div class="float-icon">
+            <i class="ri-award-fill"></i>
+          </div>
+          <div class="float-text">
+            <strong>100% Original Brand</strong>
+            <span>Garansi Resmi & Free Servis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Bar -->
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="ri-truck-line"></i></div>
+        <div class="feature-info">
+          <h4>Pengiriman Aman</h4>
+          <p>Packing peti kayu khusus sepeda</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon"><i class="ri-shield-star-line"></i></div>
+        <div class="feature-info">
+          <h4>Garansi Resmi</h4>
+          <p>Garansi resmi pabrikan s.d 5 Tahun</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon"><i class="ri-tools-line"></i></div>
+        <div class="feature-info">
+          <h4>Teknisi Profesional</h4>
+          <p>Servis & rakit sepeda presisi tinggi</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon"><i class="ri-whatsapp-line"></i></div>
+        <div class="feature-info">
+          <h4>Konsultasi Gratis</h4>
+          <p>WA CS: 0816-1918-515</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Circular Icon Categories Slider -->
+  <section class="circular-categories-section" id="kategori-populer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Jelajah Kategori</span>
+        <h2 class="section-title">Kategori Populer</h2>
+        <p class="section-desc">Geser ke samping dengan kursor atau jari Anda untuk melihat pilihan kategori.</p>
+      </div>
+
+      <div class="horizontal-scroll-container" id="circularCatSlider">
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sepeda]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-riding-line"></i></div>
+          <span class="circular-cat-label">Sepeda MTB</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sepeda]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-speed-up-line"></i></div>
+          <span class="circular-cat-label">Road Bike</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sepeda]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-treasure-map-line"></i></div>
+          <span class="circular-cat-label">Sepeda Lipat</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sparepart]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-settings-4-line"></i></div>
+          <span class="circular-cat-label">Drivetrain</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sparepart]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-disc-line"></i></div>
+          <span class="circular-cat-label">Ban & Velg</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=aksesoris]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-shield-user-line"></i></div>
+          <span class="circular-cat-label">Helm Safety</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=aksesoris]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-lightbulb-line"></i></div>
+          <span class="circular-cat-label">Lampu LED</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sparepart]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-tools-line"></i></div>
+          <span class="circular-cat-label">Tools & Pompa</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sparepart]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-heart-pulse-line"></i></div>
+          <span class="circular-cat-label">Sadel & Pedal</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=aksesoris]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-t-shirt-line"></i></div>
+          <span class="circular-cat-label">Apparel & Jersey</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=aksesoris]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-cup-line"></i></div>
+          <span class="circular-cat-label">Bottle & Cage</span>
+        </div>
+
+        <div class="circular-cat-card" onclick="document.querySelector('[data-category=sparepart]').click(); document.getElementById('katalog').scrollIntoView();">
+          <div class="circular-cat-icon"><i class="ri-drop-line"></i></div>
+          <span class="circular-cat-label">Oli & Pelumas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Highlights Grid -->
+  <section class="promo-highlights-section">
+    <div class="container promo-grid">
+      
+      <!-- Card 1: Gratis Servis -->
+      <div class="promo-card promo-card-1">
+        <iconify-icon icon="solar:settings-minimalistic-bold-duotone" class="promo-icon-badge"></iconify-icon>
+        <div class="promo-card-content">
+          <span class="promo-tag">
+            <iconify-icon icon="solar:gift-bold" style="font-size: 1rem;"></iconify-icon> Promo Eksklusif
+          </span>
+          <h3 class="promo-title">Paket Gratis Servis 1 Tahun Setiap Pembelian Unit Sepeda</h3>
+        </div>
+        <a href="https://wa.me/628161918515?text=Halo%20Putra%20Sunda%20Jaya,%20saya%20mau%20tanya%20Promo%20Paket%20Gratis%20Servis" target="_blank" class="btn">
+          Klaim Promo WA <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+      <!-- Card 2: Diskon Sparepart -->
+      <div class="promo-card promo-card-2">
+        <iconify-icon icon="ph:gear-duotone" class="promo-icon-badge"></iconify-icon>
+        <div class="promo-card-content">
+          <span class="promo-tag">
+            <iconify-icon icon="solar:sale-bold" style="font-size: 1rem;"></iconify-icon> Diskon Up to 25%
+          </span>
+          <h3 class="promo-title">Diskon Sparepart Shimano Original & Groupset Deore XT</h3>
+        </div>
+        <a href="#katalog" class="btn">
+          Lihat Katalog Sparepart <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+      <!-- Card 3: Voucher Aksesoris -->
+      <div class="promo-card promo-card-3">
+        <iconify-icon icon="ph:helmet-duotone" class="promo-icon-badge"></iconify-icon>
+        <div class="promo-card-content">
+          <span class="promo-tag">
+            <iconify-icon icon="solar:ticket-bold" style="font-size: 1rem;"></iconify-icon> Special Voucher
+          </span>
+          <h3 class="promo-title">Voucher Aksesoris & Helm Safety Hemat S.D 100 Ribu</h3>
+        </div>
+        <a href="#katalog" class="btn">
+          Belanja Aksesoris <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Catalog & Products Slider - Gambar 2 Layout (Rodalink Orange Theme Exact) -->
+  <section class="products-section" id="katalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pajangan Produk Terlaris</span>
+        <h2 class="section-title">Paling Laris</h2>
+        <p class="section-desc">Geser produk dengan kursor atau jari Anda ke samping untuk menelusuri koleksi kami.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-category="semua">Semua Produk</button>
+          <button class="filter-tab" data-category="sepeda">Sepeda</button>
+          <button class="filter-tab" data-category="sparepart">Sparepart</button>
+          <button class="filter-tab" data-category="aksesoris">Aksesoris</button>
+        </div>
+      </div>
+
+      <!-- Gambar 2 Exact: Orange Banner (Left) + Product Scroller (Right, Overlapping) -->
+      <div class="rodalink-hero-wrapper" style="position:relative;">
+
+        <!-- Left Orange Banner Card (Gambar 2 structure: icon top-left, text bottom-left) -->
+        <div class="rodalink-banner-left">
+          <!-- Top: White Circle with Upward Arrow (Gambar 2 icon) -->
+          <div class="rodalink-icon-circle">
+            <i class="ri-arrow-up-line"></i>
+          </div>
+
+          <!-- Bottom: Banner Text -->
+          <div class="rodalink-banner-text">
+            <span class="banner-sub">Dipilih Ribuan Pesepeda<br>Untuk pengalaman yang lebih</span>
+            <div class="banner-main">
+              Terbukti Jadi
+              <span>FAVORIT!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Cards Slider (sits on top of orange banner) -->
+        <div class="product-scroll-slider" id="productsContainer">
+          <!-- Injected dynamically by app.js -->
+        </div>
+
+        <!-- Floating Right Next Arrow Button -->
+        <button class="slider-next-arrow" id="sliderNextBtn" onclick="scrollSliderRight()" title="Lihat Produk Selanjutnya">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Activity Feature Cards Slider -->
+  <section class="services-section" id="layanan">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Layanan Spesialis Bengkel</span>
+        <h2 class="section-title">Servis & Pengalaman Gowes Maksimal</h2>
+        <p class="section-desc">Geser ke samping untuk memilih layanan. Klik kartu untuk melihat rincian detail pengerjaan.</p>
+      </div>
+
+      <!-- Services Horizontal Drag Slider -->
+      <div class="horizontal-scroll-container" id="servicesSliderContainer">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Partners Carousel Slider -->
+  <section class="brands-section" id="brand-mitra">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Mitra Brand Resmi</span>
+        <h2 class="section-title">Jaminan 100% Original Brand Dunia</h2>
+      </div>
+
+      <div class="brand-scroll-slider" id="brandSlider">
+        <div class="brand-pill-card">SHIMANO</div>
+        <div class="brand-pill-card">POLYGON</div>
+        <div class="brand-pill-card">UNITED</div>
+        <div class="brand-pill-card">SPECIALIZED</div>
+        <div class="brand-pill-card">SRAM</div>
+        <div class="brand-pill-card">ROCKSHOX</div>
+        <div class="brand-pill-card">MARIN</div>
+        <div class="brand-pill-card">TERN</div>
+        <div class="brand-pill-card">BROOKS</div>
+        <div class="brand-pill-card">SCHWALBE</div>
+        <div class="brand-pill-card">MAXXIS</div>
+        <div class="brand-pill-card">CONTINENTAL</div>
+        <div class="brand-pill-card">CAMPAGNOLO</div>
+        <div class="brand-pill-card">FOX RACING</div>
+        <div class="brand-pill-card">OAKLEY</div>
+        <div class="brand-pill-card">GIRO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Hub (Instagram & TikTok) -->
+  <section class="social-hub-section" id="sosmed">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Komunitas & Media Sosial</span>
+        <h2 class="section-title">Ikuti Instagram & TikTok Kami</h2>
+        <p class="section-desc">Dapatkan update stok unit sepeda terbaru, promo khusus, video unboxing sparepart, dan tips perawatan sepeda setiap harinya.</p>
+      </div>
+
+      <div class="social-cards-grid">
+        <!-- Instagram Card -->
+        <div class="social-card social-card-ig">
+          <div class="social-card-header">
+            <div class="social-card-icon ig-icon">
+              <i class="ri-instagram-line"></i>
+            </div>
+            <div class="social-card-info">
+              <h3>@putrasundajaya_bike</h3>
+              <p>Instagram Official Store</p>
+            </div>
+          </div>
+
+          <div class="social-card-body">
+            <p>Galeri foto rakitan sepeda kustom, testimoni pelanggan, katalog warna terbaru, dan reels tips gowes hemat bertenaga.</p>
+          </div>
+
+          <div class="social-post-preview">
+            <img src="images/mtb_bike.png" alt="Instagram Post 1">
+            <img src="images/road_bike.png" alt="Instagram Post 2">
+            <img src="images/hero_banner.png" alt="Instagram Post 3">
+          </div>
+
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-ig">
+            <i class="ri-instagram-line"></i> Follow Instagram Kami
+          </a>
+        </div>
+
+        <!-- TikTok Card -->
+        <div class="social-card social-card-tt">
+          <div class="social-card-header">
+            <div class="social-card-icon tt-icon">
+              <i class="ri-tiktok-line"></i>
+            </div>
+            <div class="social-card-info">
+              <h3>@putrasundajaya_official</h3>
+              <p>TikTok Official Store</p>
+            </div>
+          </div>
+
+          <div class="social-card-body">
+            <p>Video pendek cek suara jangkrik freehub, uji kekuatan frame carbon, tutorial ganti rantai sendiri, & LIVE promo diskon!</p>
+          </div>
+
+          <div class="social-post-preview">
+            <img src="images/road_bike.png" alt="TikTok Preview 1">
+            <img src="images/mtb_bike.png" alt="TikTok Preview 2">
+            <img src="images/hero_banner.png" alt="TikTok Preview 3">
+          </div>
+
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="btn btn-tt">
+            <i class="ri-tiktok-line"></i> Follow TikTok Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Updated Official Store Location & Google Maps Link) -->
+  <footer class="footer" id="kontak">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <div class="brand-icon"><i class="ri-riding-line"></i></div>
+          <div class="brand-text">
+            <span class="brand-name">PUTRA SUNDA <span>JAYA</span></span>
+            <span class="brand-tagline">Toko Sepeda & Sparepart</span>
+          </div>
+        </a>
+        <p>Pusat penjualan sepeda MTB, Road Bike, Sepeda Lipat, serta suku cadang original terlengkap dengan harga bersahabat dan layanan purna jual terbaik.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigasi Quick</h4>
+        <ul class="footer-links">
+          <li><a href="#beranda">Beranda Utama</a></li>
+          <li><a href="#kategori-populer">Kategori Populer</a></li>
+          <li><a href="#katalog">Katalog Sparepart</a></li>
+          <li><a href="#layanan">Layanan Servis</a></li>
+          <li><a href="#brand-mitra">Brand Mitra</a></li>
+          <li><a href="#sosmed">Instagram & TikTok</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Layanan Bengkel</h4>
+        <ul class="footer-links">
+          <li><a href="#layanan">Bike Fitting Presisi</a></li>
+          <li><a href="#layanan">Servis & Tune-Up Total</a></li>
+          <li><a href="#layanan">Rakit Kustom Bike</a></li>
+          <li><a href="#layanan">Overhaul Suspensi</a></li>
+          <li><a href="#katalog">Cek Originalitas Shimano</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Lokasi & Kontak Toko</h4>
+        <div class="footer-contact-item">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <strong>Alamat Toko:</strong><br>
+            Jl. Raya Kayu Tinggi No.7-72, RT.5/RW.11, Cakung Tim., Kec. Cakung, Kota Jakarta Timur, DKI Jakarta 13910
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="ri-time-line"></i>
+          <div>
+            <strong>Jam Operasional:</strong><br>
+            Setiap Hari: 09.00 – 20.00 WIB
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="ri-whatsapp-line"></i>
+          <div>
+            <strong>WhatsApp CS:</strong><br>
+            <a href="https://wa.me/628161918515" target="_blank" style="color: var(--clr-whatsapp); font-weight: 700;">0816-1918-515</a>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <a href="https://maps.app.goo.gl/kgKuJYaKbcwKUzRD8" target="_blank" rel="noopener" class="btn btn-outline-light" style="font-size: 0.8rem; padding: 0.6rem 1rem; width: 100%;">
+            <i class="ri-map-2-line"></i> Buka Petunjuk di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Putra Sunda Jaya. Hak Cipta Dilindungi Undang-Undang.</p>
+      <div style="display: flex; gap: 1rem; color: #64748b; font-size: 1.2rem;">
+        <i class="ri-visa-line" title="Visa"></i>
+        <i class="ri-mastercard-line" title="Mastercard"></i>
+        <i class="ri-bank-card-line" title="Transfer Bank"></i>
+        <i class="ri-qr-code-line" title="QRIS Payment"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" onclick="toggleMobileDrawer(false)"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><i class="ri-riding-line"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">PUTRA SUNDA <span>JAYA</span></span>
+        </div>
+      </div>
+      <button class="close-btn" onclick="toggleMobileDrawer(false)"><i class="ri-close-line"></i></button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#beranda" onclick="toggleMobileDrawer(false)"><i class="ri-home-4-line"></i> Beranda</a></li>
+      <li><a href="#kategori-populer" onclick="toggleMobileDrawer(false)"><i class="ri-grid-line"></i> Kategori Populer</a></li>
+      <li><a href="#katalog" onclick="toggleMobileDrawer(false)"><i class="ri-shopping-bag-3-line"></i> Katalog Produk</a></li>
+      <li><a href="#layanan" onclick="toggleMobileDrawer(false)"><i class="ri-tools-line"></i> Layanan Servis</a></li>
+      <li><a href="#brand-mitra" onclick="toggleMobileDrawer(false)"><i class="ri-award-line"></i> Brand Mitra</a></li>
+      <li><a href="#sosmed" onclick="toggleMobileDrawer(false)"><i class="ri-instagram-line"></i> Social Media Feed</a></li>
+      <li><a href="#kontak" onclick="toggleMobileDrawer(false)"><i class="ri-phone-line"></i> Kontak & Lokasi</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--clr-border);">
+      <a href="https://wa.me/628161918515?text=Halo%20Putra%20Sunda%20Jaya" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+        <i class="ri-whatsapp-line"></i> Chat WA 0816-1918-515
+      </a>
+    </div>
+  </div>
+
+  <!-- Slide-over Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCartDrawer(false)"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="ri-shopping-bag-3-line"></i> Keranjang Belanja</h3>
+      <button class="close-btn" onclick="toggleCartDrawer(false)" title="Tutup">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartDrawerBody">
+      <!-- Dynamically filled by js/app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total Est.:</span>
+        <span class="total-amount" id="cartTotalAmount">Rp 0</span>
+      </div>
+
+      <button class="btn btn-whatsapp" style="width: 100%; font-size: 0.95rem;" onclick="checkoutWhatsApp()">
+        <i class="ri-whatsapp-line"></i> Pesan via WhatsApp Direct
+      </button>
+    </div>
+  </div>
+
+  <!-- Quick View & Service Detail Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-container">
+      <button class="close-btn modal-close" onclick="closeQuickView()" title="Tutup">
+        <i class="ri-close-line"></i>
+      </button>
+      <div id="modalContentContainer">
+        <!-- Injected dynamically by js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
